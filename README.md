@@ -8,6 +8,8 @@
 - CSS3
 - JavaScript
 - Bootstrap
+- JQuery
+- AJAX
 
 ### Plugins
 - AdminLTE
