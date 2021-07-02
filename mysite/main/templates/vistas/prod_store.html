@@ -1,0 +1,42 @@
+{% extends "list.html" %}
+
+{% block content %}
+    <div class="card card-primary">
+        <div class="card-header">
+            <h3 class="card-title">
+                <i class="far fa-clipboard"></i>
+                {{ title }}
+            </h3>
+        </div>
+        <div class="card-body">
+            <table class="table" id="data">
+                <thead>
+                    <tr>
+                        <th scope="col">Sku</th>
+                        <th scope="col">Producto</th>
+                        <th scope="col">Categoria</th>
+                        <th scope="col">ID del almacen</th>
+                        <th scope="col">Stock</th>                   
+                    </tr>   
+                </thead>
+                <tbody>
+                    {% for s in store %}
+                        <tr>
+                            <td>{{s.productos__sku}}</td>
+                            <td>{{s.productos__nombre_prod}}</td>
+                            <td>{{s.productos__categoria}}</td>
+                            <td>{{s.id}}</td>
+                            <td>{{s.cantidad}}</td>                   
+                                        
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        <div class="card-footer">            
+            <a href="{{ list_url }}" class="btn btn-success btnTest">
+                <i class="fas fa-sync"></i> Actualizar
+            </a> 
+        </div>
+    </div>
+{% endblock content %}

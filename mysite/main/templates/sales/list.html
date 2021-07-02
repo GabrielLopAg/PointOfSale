@@ -1,0 +1,26 @@
+{% extends "list.html" %}
+{% load static %}
+{% block head_list %}
+    <script src="{% static 'sales/js/list.js' %}"></script>
+{% endblock %}
+
+{% block columns %}
+    <tr>
+        <th scope="col">Número de venta</th>
+        <th scope="col">Municipio</th>
+        <th scope="col">Colonia</th>
+        <th scope="col">Calle</th>
+        <th scope="col">Fecha de venta</th>
+        <th scope="col">Estado de venta</th>
+        <th scope="col">Monto total</th>
+        <th scope="col">Opciones</th>
+    </tr>
+{% endblock %}
+
+{% block rows %}
+    
+{% endblock %}
+
+{% block javascript %}
+
+{% endblock %}

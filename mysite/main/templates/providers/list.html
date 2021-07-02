@@ -1,0 +1,28 @@
+{% extends "list.html" %}
+{% load static %}
+{% block head_list %}
+    <script src="{% static 'providers/js/list.js' %}"></script>
+{% endblock %}
+
+{% block columns %}
+    <tr>
+        <th scope="col">Nombre Comercial</th>
+        <th scope="col">Nombre del representante</th>
+        <th scope="col">Teléfono movil</th>
+        <th scope="col">Teléfono fijo</th>
+        <th scope="col">Correo</th>
+        <th scope="col">Municipio</th>
+        <th scope="col">Colonia</th>
+        <th scope="col">Calle</th>
+        <th scope="col">Pagina web</th>
+        <th scope="col">Opciones</th>
+    </tr>
+{% endblock %}
+
+{% block rows %}
+
+{% endblock %}
+
+{% block javascript %}
+
+{% endblock %}

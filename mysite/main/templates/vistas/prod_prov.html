@@ -1,0 +1,43 @@
+{% extends "list.html" %}
+
+{% block content %}
+    <div class="card card-primary">
+        <div class="card-header">
+            <h3 class="card-title">
+                <i class="far fa-clipboard"></i>
+                {{ title }}
+            </h3>
+        </div>
+        <div class="card-body">
+            <table class="table" id="data">
+                <thead>
+                    <tr>                    
+                        <th scope="col">Sku</th>
+                        <th scope="col">Producto</th>
+                        <th scope="col">Empresa</th>
+                        <th scope="col">Correo</th>        
+                        <th scope="col">Pagina Web</th>        
+                    </tr> 
+                </thead>
+                <tbody>
+                    {% for p in provs %}
+                    <tr>
+                        <td>{{p.productos__sku}}</td>
+                        <td>{{p.productos__nombre_prod}}</td>
+                        <td>{{p.nombre_comercial}}</td>
+                        <td>{{p.correo}}</td>            
+                        <td>{{p.pagina_web}}</td>            
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        <div class="card-footer">            
+            <a href="{{ list_url }}" class="btn btn-success btnTest">
+                <i class="fas fa-sync"></i> Actualizar
+            </a> 
+        </div>
+    </div>
+{% endblock content %}
+
+

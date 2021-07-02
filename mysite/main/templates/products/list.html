@@ -1,0 +1,27 @@
+{% extends "list.html" %}
+{% load static %}
+{% block head_list %}
+    <script src="{% static 'products/js/list.js' %}"></script>
+{% endblock %}
+
+{% block columns %}
+    <tr>
+        <th scope="col">Sku</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Categoria</th>
+        <!--<th scope="col">Descripción</th>-->
+        <th scope="col">Cotización</th>
+        <th scope="col">Precio</th>
+        <th scope="col">Costo Unitario</th>
+        <th scope="col">Costo Paquete</th>
+        <th scope="col">Opciones</th>
+    </tr>
+{% endblock %}
+
+{% block rows %}
+    
+{% endblock %}
+
+{% block javascript %}
+
+{% endblock %}
