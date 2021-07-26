@@ -19,13 +19,13 @@ class ProductsListView(ListView):
         return super().dispatch(request, *args, **kwargs)
 
     def post(self, request, *args, **kwargs):
-        data = {}
+        data = {} 
         try:
             # data = Productos.objects.get(sku=request.POST['id']).toJSON()
             action = request.POST['action']
             if action == 'searchdata':
                 data = []
-                for i in Productos.objects.all():  # Productos.objects.all() obtengo los datos de mi BD
+                for i in Productos.objects.all():  # Productos.objects.all() obtengo los datos de mi BD     select * from productos;
                     data.append(i.toJSON())  # coleccion de diccionarios
                 else:
                     pass
