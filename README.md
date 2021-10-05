@@ -15,7 +15,7 @@
 - AdminLTE
 - Highcharts
 - Datatables
-- SwwetAlert
+- SweetAlert
 
 ### Back-End
 - Python3.9
